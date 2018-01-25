@@ -60,25 +60,32 @@ mymap.fitBounds(earthquakelayer.getBounds());
 		</script>
 
 		<!-- the following CSS is used to set the size of the Map -->
-		<style type="text/css">
-		#mapid { height: 180px; }
-		</style>
+		<style>
+			body {
+				padding: 0;
+            	margin: 0;
+        	}
+        	html, body, #mapid {
+            	height: 100%;
+            	width: 100%;
+        	}
+    	</style>
 
-		<link rel="stylesheet" href=" ionicons.min.css">
+		<link rel="stylesheet" href="ionicons.min.css">
 		<link rel="stylesheet" href="leaflet.awesome-markers.css">
 		<script src="leaflet.awesome-markers.js"></script>
 </head>
 <body>
 		
 		<!-- the mapid div will hold the map -->
-		<div id="mapid" style="width: 1000px; height: 550px;"></div>
+		<div id="mapid"></div>
 		<!-- the following script will load the map and set the default view and zoom, as well as loading the basemap tiles -->
 		<script>
 
 		// load the map
 		var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 		// load the tiles
-		L.tileLayer('https://api.mapbox.com/styles/v1/rjhargreaves/cjb3srp3g01zi2rqabp3rk293/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoicmpoYXJncmVhdmVzIiwiYSI6ImNpa3JmbDJiazAwMDF3Y20xMHoyaXowdDAifQ.78vWSemMDwn42TwMuxfODw', {maxZoom: 18,attribution: 'Map data &copy; <ahref="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+		L.tileLayer('https://api.mapbox.com/styles/v1/rjhargreaves/cjcv3d22i04bp2rpza7tjx1c4/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoicmpoYXJncmVhdmVzIiwiYSI6ImNpa3JmbDJiazAwMDF3Y20xMHoyaXowdDAifQ.78vWSemMDwn42TwMuxfODw', {maxZoom: 18,attribution: 'Map data &copy; <ahref="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,' 
 			+ 
 				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
